@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnical Documentation</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+    </style>
+</head>
+
+<body>
+
+
+    <nav id="navbar">
+        <header class="nav-title">Table of Contents</header>
+        <ul class="nav-list-container">
+            <li class="nav-list-item">
+                <a href="#An_Informal_Introduction_to_Python" class="nav-link">An Informal Introduction to Python</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="#Using_Python_as_a_Calculator" class="nav-link">Using Python as a Calculator</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="#Numbers" class="nav-link">Numbers</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="#Strings" class="nav-link">Strings</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="#Lists" class="nav-link">Lists</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="#First_Steps_Towards_Programming" class="nav-link">First Steps Towards Programming</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main id="main-doc">
+
+        <section class="main-section" id="An_Informal_Introduction_to_Python">
+            <header>
+                <h3>An Informal Introduction to Python</h3>
+            </header>
+            <p>Note: don't take this seriously, I am not the author of this information about python, it is just a copy and paste of <a href="https://docs.python.org/3/tutorial/index.html">Python 3.9.2 documentation</a>, I just do this for practice HTML
+                and CSS</p>
+            <p>
+                In the following examples, input and output are distinguished by the presence or absence of prompts (>>> and …): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output
+                from the interpreter. Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.
+            </p>
+
+            <p>Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Python start with the hash character, #, and extend to the end of the physical line. A comment may appear at the start of a line
+                or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing
+                in examples.</p>
+            <p>Some examples:</p>
+            <code>
+                # this is the first comment <br>
+                spam = 1  # and this is the second comment <br>
+                # ... and now a third! <br>
+                text = "# This is not a comment because it's inside quotes." <br>
+            </code>
+        </section>
+
+        <section class="main-section" id="Using_Python_as_a_Calculator">
+            <header>
+                <h3>Using Python as a Calculator</h3>
+            </header>
+            <p>Let’s try some simple Python commands. Start the interpreter and wait for the primary prompt, >>>. (It shouldn’t take long.)</p>
+        </section>
+
+        <section class="main-section" id="Numbers">
+            <header>
+                <h3>Numbers</h3>
+            </header>
+            <p>The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages (for example, Pascal or C);
+                parentheses (()) can be used for grouping. For example:</p>
+            <code>
+                >>> 2 + 2<br>
+                4 <br>
+                >>> 50 - 5*6 <br>
+                20 <br>
+                >>> (50 - 5*6) / 4<br>
+                5.0<br>
+                >>> 8 / 5  # division always returns a floating point number<br>
+                1.6
+            </code>
+        </section>
+
+
+
+        <section class="main-section" id="Strings">
+            <header>
+                <h3>Strings</h3>
+            </header>
+            <p>Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes ('...') or double quotes ("...") with the same result 2. \ can be used to escape quotes:</p>
+            <code>
+                >>> 'spam eggs'  # single quotes<br>
+                'spam eggs'<br>
+                >>> 'doesn\'t'  # use \' to escape the single quote...<br>
+                "doesn't"<br>
+                >>> "doesn't"  # ...or use double quotes instead<br>
+                "doesn't"<br>
+                >>> '"Yes," they said.'<br>
+                '"Yes," they said.'<br>
+                >>> "\"Yes,\" they said."<br>
+                '"Yes," they said.'<br>
+                >>> '"Isn\'t," they said.'<br>
+                '"Isn\'t," they said.'<br>
+            </code>
+        </section>
+
+        <section class="main-section" id="Lists">
+            <header>
+                <h3>Lists</h3>
+            </header>
+            <p>Python knows a number of compound data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different
+                types, but usually the items all have the same type.</p>
+            <code>
+                >>> squares = [1, 4, 9, 16, 25]<br>
+                >>> squares<br>
+                [1, 4, 9, 16, 25]<br>
+            </code>
+            <p>Like strings (and all other built-in sequence types), lists can be indexed and sliced:</p>
+            <code>
+                >>> squares[0]  # indexing returns the item<br>
+                1<br>
+                >>> squares[-1]<br>
+                25<br>
+                >>> squares[-3:]  # slicing returns a new list<br>
+                [9, 16, 25]<br>
+            </code>
+        </section>
+
+        <section class="main-section" id="First_Steps_Towards_Programming">
+            <header>
+                <h3>First Steps Towards Programming</h3>
+            </header>
+            <p>Of course, we can use Python for more complicated tasks than adding two and two together. For instance, we can write an initial sub-sequence of the Fibonacci series as follows:</p>
+            <code>
+                >>> # Fibonacci series: <br>
+                ... # the sum of two elements defines the next <br>
+                ... a, b = 0, 1 <br>
+                >>> while a < 10: <br>
+                ...     print(a) <br>
+                ...     a, b = b, a+b <br>
+                ... <br>
+                0 <br>
+                1 <br>
+                1 <br>
+                2 <br> 
+                3 <br>
+                5 <br>
+                8 <br>
+            </code>
+            <p>This example introduces several new features.</p>
+            <ul class="list-items">
+                <li>The first line contains a multiple assignment: the variables a and b simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before
+                    any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.</li>
+                <li>The while loop executes as long as the condition (here: a
+                    < 10) remains true. In Python, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the
+                        example is a simple comparison. The standard comparison operators are written the same as in C: < (less than),> (greater than), == (equal to),
+                        <=( less than or equal to),>= (greater than or equal to) and != (not equal to).</li>
+                <li>The body of the loop is indented: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Python
+                    with a text editor; all decent text editors have an auto-indent facility. When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed
+                    the last line). Note that each line within a basic block must be indented by the same amount.</li>
+                <li>
+                    The print() function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and
+                    strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely, like this:
+                </li>
+                <li>hello :)</li>
+            </ul>
+            <code>
+                >>> i = 256*256<br>
+                >>> print('The value of i is', i)<br>
+                The value of i is 65536<br>
+            </code>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>by: <a href="https://twitter.com/Manuel09779534">Manuel Peñaloza (Manuel-2)</a>, 29/03/2021</p>
+    </footer>
+</body>
+
+</html>
